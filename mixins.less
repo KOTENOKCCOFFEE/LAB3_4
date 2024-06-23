@@ -1,0 +1,109 @@
+// Миксин для кнопок
+.button-style(@bg-color, @text-color, @hover-bg, @hover-text) {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: @text-color;
+  background-color: @bg-color;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background-color: @hover-bg;
+    color: @hover-text;
+  }
+}//Кнопка купить
+.buy-btn-style(@bg-color, @text-color, @hover-bg, @hover-text) {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  width: 100%;
+  color: @text-color;
+  background-color: @bg-color;
+
+  &:hover {
+    background-color: @hover-bg;
+    color: @hover-text;
+  }
+}
+//Отправить кнопка
+.submit-button-style(@bg-color, @text-color, @hover-bg, @hover-text) {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: @text-color;
+  background-color: @bg-color;
+
+  &:hover {
+    background-color: @hover-bg;
+    color: @hover-text;
+  }
+}
+//Для кнокпи меню снизу
+.footer-menu-btn-style(@bg-color, @text-color, @hover-bg, @hover-text, @border-color) {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: @text-color;
+  background-color: @bg-color;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border: 1px solid @border-color;
+  z-index: 2;
+
+  &:hover {
+    background-color: @hover-bg;
+    color: @hover-text;
+  }
+}
+//еще
+.more-games-btn-style(@bg-color, @text-color, @hover-bg, @hover-text) {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  color: @text-color;
+  background-color: @bg-color;
+
+  &:hover {
+    text-decoration: none;
+    background-color: @hover-bg;
+    color: @hover-text;
+  }
+}
+//для "?" подсказки
+.tooltip-btn-style(@color, @hover-visibility: visible, @hover-opacity: 1) {
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  color: @color;
+
+  &:hover {
+    visibility: @hover-visibility;
+    opacity: @hover-opacity;
+  }
+}

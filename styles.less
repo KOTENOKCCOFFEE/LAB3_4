@@ -1,0 +1,139 @@
+@import "./mixins.less";
+
+// Использование миксина для кнопок
+.search-form .button {
+  .button-style(#000, #fff, #555, #fff);
+}
+
+.buy-btn {
+  .buy-btn-style(#b23333, #333, #555, #fff);
+}
+
+.medium {
+  .button-style(#fff, #333, #555, #63d735);
+}
+
+.more-games-btn {
+  .more-games-btn-style(#333, #fff, #555, #fff);
+}
+
+.read-more-btn {
+  .button-style(#000, #fff, #555, #fff);
+}
+.small{
+  .button-style(#fff, #333, #555, #fff);
+}
+.submit-button {
+  .submit-button-style(#333, #fff, #555, #fff);
+}
+
+.back-to-home-btn {
+  .button-style(#000, #fff, #555, #fff);
+}
+
+.footer-menu-btn {
+  .footer-menu-btn-style(#333, #fff, #555, #fff, #fff);
+}
+.tooltip-btn {
+  .tooltip-btn-style(#555);
+}
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+  .news-item {
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .news-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-item {
+    flex: 1 1 100%;
+  }
+
+}
+/* Стили кнопки в футере */
+.footer-menu-btn {
+  .footer-menu-btn-style(#8d4633, #fc8d02, #ff5c00, #fff, #333);
+}
+
+.footer-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 150px;
+}
+
+
+.footer-menu a {
+  display: block;
+  color: #fff;
+
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.footer-menu a:hover {
+  background-color: #555;
+  text-decoration: none
+}
+
+.footer-menu.show {
+  display: block;
+}
+
+
+/* Поправки для кнопок на мобильных устройствах */
+@media (max-width: 576px) {
+  .buy-btn {
+    width: 100%;
+  }
+}
+
+/* Стили для модального окна оплаты */
+.modal-body {
+  max-height: calc(100vh - 210px);
+  text-align: center;
+  overflow-y: auto;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-title {
+  font-size: 24px;
+}
+
+.modal-body select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-body button {
+  .buy-btn-style(#ff3600, #fff, #ff6a00, #fff);
+
+}
+
+.modal-body button:hover {
+  .buy-btn-style(#f6f4f4, #fff, #ff6a00, #fff);
+}
